@@ -73,7 +73,7 @@ export const constantRoutes = [
   {
     path: '/user',
     component: Layout,
-    hidden: true,
+    // hidden: true,
     redirect: 'noredirect',
     children: [
       {
