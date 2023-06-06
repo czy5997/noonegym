@@ -71,6 +71,27 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/member',
+    component: Layout,
+    // hidden: true,
+    redirect: 'noredirect',
+    meta: { title: '会员管理', icon: 'user' },
+    children: [
+      {
+        path: 'personal',
+        component: () => import('@/views/member/personal'),
+        name: 'personal',
+        meta: { title: '个人会员', icon: 'user' }
+      },
+      {
+        path: 'bussiness',
+        component: () => import('@/views/member/bussiness'),
+        name: 'bussiness',
+        meta: { title: '企业管理', icon: 'user' }
+      }
+    ]
+  },
+  {
     path: '/user',
     component: Layout,
     // hidden: true,
